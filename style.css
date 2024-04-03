@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333; /* Dark background for the header */
+    color: #fff;
+    padding: 10px 0; /* Some padding to give space inside the header */
+}
+
+header nav {
+    width: 90%;
+    margin: 0 auto; /* Center the nav within the header */
+}
+
+header nav ul {
+    list-style: none;
+    text-align: right; /* Align the nav items to the right */
+}
+
+header nav ul li {
+    display: inline; /* Display nav items inline */
+    margin-left: 20px; /* Space out the nav items */
+}
+
+header nav ul li a {
+    color: #fff; /* White text color for nav links */
+    text-decoration: none; /* No underline on nav links */
+    text-transform: uppercase; /* Uppercase text for nav links */
+    font-weight: bold; /* Make the nav links bold */
+}
+
+header nav ul li a:hover {
+    color: #aaa; /* Color for nav link hover state */
+    border-bottom: 2px solid #fff; /* Underline effect on hover */
+}
+
+/* Additional styling for active/current page link */
+header nav ul li a.active {
+    border-bottom: 2px solid #fff; /* Underline effect for active nav link */
+}
+
+
+.about-me {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 40px auto; /* Centers the section and adds space above and below */
+    padding: 20px;
+    background: #f9f9f9; /* Light background for the section */
+    border-radius: 10px; /* Rounded corners for the section */
+}
+
+.about-me h1 {
+    color: #333; /* Dark color for the heading */
+    font-size: 36px; /* Large font size for the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.about-me p {
+    color: #666; /* Medium color for text, for readability */
+    line-height: 1.6; /* Space between lines */
+    margin-bottom: 16px; /* Adds space below each paragraph */
+}
+
+.profile-pic {
+    float: right; /* Align the image to the right of the text */
+    margin-left: 20px; /* Adds space between the image and the text */
+    margin-bottom: 20px; /* Adds space below the image */
+    width: 200px; /* Sets the image width */
+    height: 200px; /* Sets the image height */
+    border-radius: 50%; /* Makes the image round */
+    border: 3px solid #eee; /* Adds a light border around the image */
+    background-color: #fff; /* Adds a background color to the image */
+}
+
+/* Clearfix for the floated image */
+.about-me::after {
+    content: "";
+    display: table;
+    clear: both;
+}

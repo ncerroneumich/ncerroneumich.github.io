@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333; /* Dark background for the header */
+            color: #fff;
+            padding: 10px 0; /* Some padding to give space inside the header */
+        }
+
+        header nav {
+            width: 90%;
+            margin: 0 auto; /* Center the nav within the header */
+        }
+
+        header nav ul {
+            list-style: none;
+            text-align: right; /* Align the nav items to the right */
+        }
+
+        header nav ul li {
+            display: inline; /* Display nav items inline */
+            margin-left: 20px; /* Space out the nav items */
+        }
+
+        header nav ul li a {
+            color: #fff; /* White text color for nav links */
+            text-decoration: none; /* No underline on nav links */
+            text-transform: uppercase; /* Uppercase text for nav links */
+            font-weight: bold; /* Make the nav links bold */
+        }
+
+        header nav ul li a:hover {
+            color: #aaa; /* Color for nav link hover state */
+            border-bottom: 2px solid #fff; /* Underline effect on hover */
+        }
+
+        /* Additional styling for active/current page link */
+        header nav ul li a.active {
+            border-bottom: 2px solid #fff; /* Underline effect for active nav link */
+        }
+
+
+        .about-me {
+            max-width: 800px; /* Adjust the width as needed */
+            margin: 40px auto; /* Centers the section and adds space above and below */
+            padding: 20px;
+            background: #f9f9f9; /* Light background for the section */
+            border-radius: 10px; /* Rounded corners for the section */
+        }
+
+        .about-me h1 {
+            color: #333; /* Dark color for the heading */
+            font-size: 36px; /* Large font size for the heading */
+            margin-bottom: 20px; /* Adds space below the heading */
+        }
+
+        .about-me p {
+            color: #666; /* Medium color for text, for readability */
+            line-height: 1.6; /* Space between lines */
+            margin-bottom: 16px; /* Adds space below each paragraph */
+        }
+
+        .profile-pic {
+            float: right; /* Align the image to the right of the text */
+            margin-left: 20px; /* Adds space between the image and the text */
+            margin-bottom: 20px; /* Adds space below the image */
+            width: 200px; /* Sets the image width */
+            height: 200px; /* Sets the image height */
+            border-radius: 50%; /* Makes the image round */
+            border: 3px solid #eee; /* Adds a light border around the image */
+            background-color: #fff; /* Adds a background color to the image */
+        }
+
+        /* Clearfix for the floated image */
+        .about-me::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .section {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #fff; /* Light background for visibility */
+        }
+
+        /* Style for section titles */
+        .section h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Style for section content */
+        .section p {
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        /* Styling for the Contact section, if needed */
+        .contact {
+            background: #f2f2f2; /* Slightly different background for contrast */
+        }
+
+        /* Add a horizontal line between sections */
+        .section:not(:first-child) {
+            border-top: 2px solid #eaeaea; /* Adds a line at the top of the sections */
+            padding-top: 40px; /* Adds space above the content, so it doesn't touch the line */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#other-projects">Other Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <main>
+        <section class="about-me">
+            <h1>Hello 👋</h1>
+            <p>
+                Insert description here.
+            </p>
+            <img src="headshot.png" alt="Nickolas Cerrone's Headshot" class="profile-pic"/>
+        </section>
+
+        <section class="section" id="games">
+            <h2>Games</h2>
+            <p>
+                Details about your game development projects...
+            </p>
+        </section>
+        
+        <section class="section" id="other-projects">
+            <h2>Other Projects</h2>
+            <p>
+                Showcase other significant projects you've worked on...
+            </p>
+        </section>
+        
+        <section class="section contact" id="contact">
+            <h2>Contact</h2>
+            <p>
+                Let's get in touch! Email me at...
+            </p>
+        </section>
+    </main>
+</body>
+</html>
