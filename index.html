@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Nickolas Cerrone</title>
     <style>
         * {
             margin: 0;
@@ -19,9 +19,9 @@
         }
 
         header {
-            background: #333; /* Dark background for the header */
+            background: #727272; /* Dark background for the header */
             color: #fff;
-            padding: 10px 0; /* Some padding to give space inside the header */
+            padding: 20px 0; /* Some padding to give space inside the header */
         }
 
         header nav {
@@ -61,7 +61,7 @@
             max-width: 800px; /* Adjust the width as needed */
             margin: 40px auto; /* Centers the section and adds space above and below */
             padding: 20px;
-            background: #f9f9f9; /* Light background for the section */
+            background: #f2f2f2; /* Light background for the section */
             border-radius: 10px; /* Rounded corners for the section */
         }
 
@@ -88,17 +88,10 @@
             background-color: #fff; /* Adds a background color to the image */
         }
 
-        /* Clearfix for the floated image */
-        .about-me::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
         .section {
             margin: 40px auto;
             padding: 20px;
-            max-width: 800px;
+            max-width: 900px;
             background: #fff; /* Light background for visibility */
         }
 
@@ -123,7 +116,116 @@
         .section:not(:first-child) {
             border-top: 2px solid #eaeaea; /* Adds a line at the top of the sections */
             padding-top: 40px; /* Adds space above the content, so it doesn't touch the line */
+        } 
+        .portfolio-piece {
+            display: flex;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 10px;
         }
+
+        .carousel-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .carousel-container img {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adjust the space between thumbnails */
+        }
+
+        .thumbnail-container img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .thumbnail-container img:hover {
+            opacity: 1;
+        }
+
+        .portfolio-description {
+            flex: 1.5;
+            margin-left: 20px;
+        }
+
+        .portfolio-description ul {
+            list-style-position: inside;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            color: #007bff; /* Primary color for your links */
+            text-decoration: none; /* Removes underline from all links */
+            transition: color 0.3s ease-in-out; /* Smooth color transition for hover effect */
+        }
+
+        /* Hover state for links */
+        a:hover,
+        a:focus { /* Adding focus for accessibility */
+            color: #0056b3; /* Darker shade for the hover/focus state */
+            text-decoration: underline; /* Adds underline on hover/focus for better indication */
+        }
+
+        /* Active state for links */
+        a:active {
+            color: #004080; /* Even darker shade to indicate active clicks */
+        }
+        
+        .tech-used {
+            background-color: #f2f2f2; /* Light grey background */
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px 10px; /* Padding inside the bar */
+            margin-top: 20px; /* Space above the bar */
+        }
+
+        .tech-used h3 {
+            margin-bottom: 10px; /* Space below the header */
+        }
+
+        .tech-tags {
+            display: flex; /* Aligns tags in a row */
+            gap: 5px; /* Space between tags */
+            flex-wrap: wrap; /* Allows tags to wrap to new line on small screens */
+        }
+
+        .tech-tags span {
+            background-color: #707070; /* Background color for tech tags, match to your theme */
+            color: white; /* Text color for tech tags */
+            padding: 5px 15px; /* Padding inside tags */
+            border-radius: 10px; /* Rounded corners for tags */
+            font-size: 0.9em; /* Smaller font size for tags */
+            white-space: nowrap; /* Prevents breaking tags into multiple lines */
+        }
+
+
     </style>
 </head>
 
@@ -140,25 +242,134 @@
     </header>    
     <main>
         <section class="about-me">
-            <h1>Hello 👋</h1>
-            <p>
-                Insert description here.
-            </p>
+            <h1>Hello 👋 I'm Nickolas Cerrone</h1>
             <img src="headshot.png" alt="Nickolas Cerrone's Headshot" class="profile-pic"/>
+            <p>
+                I am currently pursuing a degree in <b>Computer Science</b> at the University of Michigan.
+                My passion is <b>game development</b> so I'm always trying to be active in the space, whether that be developing my own <b>C++ game engine</b>, participating in game jams, or working on my own games.
+                I am an active volunteer at <a href="https://www.wolverinesoft.org/">WolverineSoft</a>, a game development studio at the university, where I am a <b>Unity programmer</b> on <a href="#CEO">Corrupt Eldritch Order</a>.
+                My other hobbies include staying active through running (planning on running a marathon this summer 🏃) and playing board games!
+            </p>
+            <div class="portfolio-links">
+                <a class="button" href="link-to-project">Resume</a>
+            </div>
         </section>
 
         <section class="section" id="games">
             <h2>Games</h2>
-            <p>
-                Details about your game development projects...
-            </p>
+
+            <section id="CEO" class="portfolio-piece">
+                <div class="carousel-container">
+                    <img id="main-image1" src="images/CEO.jpg" alt="Main Image" />
+                    <div class="thumbnail-container">
+                        <img onclick="document.getElementById('main-image1').src='images/CEO.jpg';" src="images/CEO.jpg" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image1').src='images/white square.png';" src="images/white square.png" alt="Thumbnail 2" />
+                        <img onclick="document.getElementById('main-image1').src='images/tan square.png';" src="images/tan square.png" alt="Thumbnail 3" />
+                        <!-- Add more thumbnails as needed -->
+                    </div>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Corrupt Eldritch Order</h2>
+                    <p>Programmer, January 2024 - April 2024</p>
+                    <h3>Contributions:</h3>
+                    <P>
+                        <ul>
+                            <li>test1</li>
+                            <li>test1</li>
+                            <li>test1</li>
+                        </ul>
+                    </P>
+                    <div class="tech-used">
+                        <div class="tech-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Git</span>
+                            <span>Jira</span>
+                            <span>Confluence</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-links">
+                        <a class="button" href="link-to-project">Steam Link (coming soon)</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Drawn-Together" class="portfolio-piece">
+                <div class="carousel-container">
+                    <img id="main-image1" src="images/CEO.jpg" alt="Main Image" />
+                    <div class="thumbnail-container">
+                        <img onclick="document.getElementById('main-image1').src='images/CEO.jpg';" src="images/CEO.jpg" alt="Thumbnail 1" />
+                        <!-- Add more thumbnails as needed -->
+                    </div>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Drawn Together</h2>
+                    <p>Programmer, October 2023 - December 2023</p>
+                    <h3>Contributions:</h3>
+                    <P>
+                        <ul>
+                            <li>Designed and implemented unique character abilities</li>
+                            <li>Integrated split-screen and cinematic camera features</li>
+                            <li>Designed and added the tutorial level</li>
+                            <li>Implemented in-game UI and title screen</li>
+                            <li>Realized narrative into game via cutscenes</li>
+                            <li>Lead creation of the game's trailer</li>
+                            <li>Spearhead game's marketing and animated trailer</li>
+                        </ul>
+                    </P>
+                    <div class="tech-used">
+                        <div class="tech-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Git</span>
+                            <span>Jira</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-links">
+                        <a class="button" href="https://www.youtube.com/watch?v=bVChT4zv2VU" target="_blank">Watch the Trailer</a>
+                        <a class="button" href="https://drawn-together-studios.itch.io/drawn-together" target="_blank">Itch.io</a>
+                    </div>
+                </div>
+            </section>
+
         </section>
         
         <section class="section" id="other-projects">
             <h2>Other Projects</h2>
-            <p>
-                Showcase other significant projects you've worked on...
-            </p>
+
+            <section class="portfolio-piece">
+                <div class="carousel-container">
+                    <img id="main-image2" src="images/black square.png" alt="Main Image" />
+                    <div class="thumbnail-container">
+                        <img onclick="document.getElementById('main-image2').src='images/black square.png';" src="images/black square.png" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image2').src='images/white square.png';" src="images/white square.png" alt="Thumbnail 2" />
+                        <img onclick="document.getElementById('main-image2').src='images/tan square.png';" src="images/tan square.png" alt="Thumbnail 3" />
+                        <!-- Add more thumbnails as needed -->
+                    </div>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Surreal Engine</h2>
+                    <p>Solo Programmer, Start Date - End Date</p>
+                    <h3>Contributions:</h3>
+                    <P>
+                        List Contributions here.
+                    </P>
+                    <div class="tech-used">
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>Lua</span>
+                            <span>SDL2</span>
+                            <span>Box2D</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-links">
+                        <a class="button" href="link-to-project" target="_blank">Download Binary</a>
+                        <a class="button" href="https://eecs498-game-engine.github.io/" target="_blank">Documentation</a>
+                    </div>
+                </div>
+            </section>
+
         </section>
         
         <section class="section contact" id="contact">
