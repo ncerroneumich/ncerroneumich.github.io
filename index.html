@@ -20,8 +20,14 @@
 
         header {
             background: #727272; /* Dark background for the header */
+            opacity: 90%;
             color: #fff;
             padding: 20px 0; /* Some padding to give space inside the header */
+            width: 100%; /* Full width */
+            position: sticky; /* Sticky position */
+            top: 0; /* Sticks to the top */
+            z-index: 1000; /* Ensure the header stays on top of other elements */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
         }
 
         header nav {
@@ -91,13 +97,15 @@
         .section {
             margin: 40px auto;
             padding: 20px;
-            max-width: 900px;
+            max-width: 1200px;
             background: #fff; /* Light background for visibility */
         }
 
         /* Style for section titles */
-        .section h2 {
+        .section h1 {
             color: #333;
+            font-size: 40px;
+            text-align: center;
             margin-bottom: 10px;
         }
 
@@ -117,6 +125,7 @@
             border-top: 2px solid #eaeaea; /* Adds a line at the top of the sections */
             padding-top: 40px; /* Adds space above the content, so it doesn't touch the line */
         } 
+        
         .portfolio-piece {
             display: flex;
             margin: 20px auto;
@@ -158,7 +167,7 @@
         }
 
         .portfolio-description {
-            flex: 1.5;
+            flex: 1;
             margin-left: 20px;
         }
 
@@ -241,14 +250,14 @@
         </nav>
     </header>    
     <main>
-        <section class="about-me">
+        <section id="about-me" class="about-me">
             <h1>Hello 👋 I'm Nickolas Cerrone</h1>
             <img src="headshot.png" alt="Nickolas Cerrone's Headshot" class="profile-pic"/>
             <p>
                 I am currently pursuing a degree in <b>Computer Science</b> at the University of Michigan.
                 My passion is <b>game development</b> so I'm always trying to be active in the space, whether that be developing my own <b>C++ game engine</b>, participating in game jams, or working on my own games.
                 I am an active volunteer at <a href="https://www.wolverinesoft.org/">WolverineSoft</a>, a game development studio at the university, where I am a <b>Unity programmer</b> on <a href="#CEO">Corrupt Eldritch Order</a>.
-                My other hobbies include staying active through running (planning on running a marathon this summer 🏃) and playing board games!
+                My other hobbies include staying active through running (planning on a marathon this summer 🏃) and playing board games!
             </p>
             <div class="portfolio-links">
                 <a class="button" href="link-to-project">Resume</a>
@@ -256,27 +265,30 @@
         </section>
 
         <section class="section" id="games">
-            <h2>Games</h2>
+            <h1><u>Games</u></h1>
 
             <section id="CEO" class="portfolio-piece">
                 <div class="carousel-container">
                     <img id="main-image1" src="images/CEO.jpg" alt="Main Image" />
                     <div class="thumbnail-container">
                         <img onclick="document.getElementById('main-image1').src='images/CEO.jpg';" src="images/CEO.jpg" alt="Thumbnail 1" />
-                        <img onclick="document.getElementById('main-image1').src='images/white square.png';" src="images/white square.png" alt="Thumbnail 2" />
-                        <img onclick="document.getElementById('main-image1').src='images/tan square.png';" src="images/tan square.png" alt="Thumbnail 3" />
-                        <!-- Add more thumbnails as needed -->
+                        <img onclick="document.getElementById('main-image1').src='images/classes.gif';" src="images/classes.gif" alt="Thumbnail 2" />
+                        <img onclick="document.getElementById('main-image1').src='images/weapon.gif';" src="images/weapon.gif" alt="Thumbnail 3" />
+                        <img onclick="document.getElementById('main-image1').src='images/hud.gif';" src="images/hud.gif" alt="Thumbnail 4" />
                     </div>
                 </div>
                 <div class="portfolio-description">
                     <h2>Corrupt Eldritch Order</h2>
-                    <p>Programmer, January 2024 - April 2024</p>
+                    <p>Programmer and QA, January 2024 - April 2024</p>
                     <h3>Contributions:</h3>
                     <P>
                         <ul>
-                            <li>test1</li>
-                            <li>test1</li>
-                            <li>test1</li>
+                            <li>As lead UI developer, implemented menus, notifications, and HUD</li>
+                            <li>Implemented currency drops with Unity's particle system</li>
+                            <li>Gathered bug reports, requested features, and polish concerns during periodic playtests</li>
+                            <li>Added a robust sytem for permanent unlockables</li>
+                            <li>Integrated art into various parts of the game</li>
+                            <li>Effectively communicated with teammates to enable clear flow of ideas</li>
                         </ul>
                     </P>
                     <div class="tech-used">
@@ -294,12 +306,50 @@
                 </div>
             </section>
 
+            <section id="Doge" class="portfolio-piece">
+                <div class="carousel-container">
+                    <img id="main-image4" src="images/doge.gif" alt="Main Image" />
+                    <div class="thumbnail-container">
+                        <img onclick="document.getElementById('main-image4').src='images/doge.gif';" src="images/doge.gif" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image4').src='images/doge1.png';" src="images/doge1.png" alt="Thumbnail 2" />
+                        <img onclick="document.getElementById('main-image4').src='images/doge2.png';" src="images/doge2.png" alt="Thumbnail 3" />
+                    </div>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Doge</h2>
+                    <p>Programmer, Global Game Jam 2024</p>
+                    <h3>Contributions:</h3>
+                    <P>
+                        <ul>
+                            <li>Acted as lead developer where I was responsible for programming or supervising all code-related tasks</li>
+                            <li>Imported and implemented art and audio assets created by teammates</li>
+                            <li>Managed restricted time and resources apporpriately to allow for an on-time release</li>
+                            <li>Prioritized features and tasks to achieve best player experience on release</li>
+                            <li>Guided a beginner unity programmer to the point of independence with minimal need for intervention</li>
+                        </ul>
+                    </P>
+                    <div class="tech-used">
+                        <div class="tech-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-links">
+                        <a class="button" href="https://angelpuffy.itch.io/doge" target="_blank">Itch.io</a>
+                    </div>
+                </div>
+            </section>
+
             <section id="Drawn-Together" class="portfolio-piece">
                 <div class="carousel-container">
-                    <img id="main-image1" src="images/CEO.jpg" alt="Main Image" />
+                    <img id="main-image5" src="images/dt1.png" alt="Main Image" />
                     <div class="thumbnail-container">
-                        <img onclick="document.getElementById('main-image1').src='images/CEO.jpg';" src="images/CEO.jpg" alt="Thumbnail 1" />
-                        <!-- Add more thumbnails as needed -->
+                        <img onclick="document.getElementById('main-image5').src='images/dt1.png';" src="images/dt1.png" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image5').src='images/sketch.gif';" src="images/sketch.gif" alt="Thumbnail 4" />
+                        <img onclick="document.getElementById('main-image5').src='images/skrib.gif';" src="images/skrib.gif" alt="Thumbnail 3" />
+                        <img onclick="document.getElementById('main-image5').src='images/dt2.png';" src="images/dt2.png" alt="Thumbnail 2" />
+                        <img onclick="document.getElementById('main-image5').src='images/dt3.png';" src="images/dt3.png" alt="Thumbnail 5" />
                     </div>
                 </div>
                 <div class="portfolio-description">
@@ -335,25 +385,31 @@
         </section>
         
         <section class="section" id="other-projects">
-            <h2>Other Projects</h2>
+            <h1><u>Other Projects</u></h1>
 
             <section class="portfolio-piece">
                 <div class="carousel-container">
-                    <img id="main-image2" src="images/black square.png" alt="Main Image" />
+                    <img id="main-image3" src="images/schmup.gif" alt="Main Image" />
                     <div class="thumbnail-container">
-                        <img onclick="document.getElementById('main-image2').src='images/black square.png';" src="images/black square.png" alt="Thumbnail 1" />
-                        <img onclick="document.getElementById('main-image2').src='images/white square.png';" src="images/white square.png" alt="Thumbnail 2" />
-                        <img onclick="document.getElementById('main-image2').src='images/tan square.png';" src="images/tan square.png" alt="Thumbnail 3" />
-                        <!-- Add more thumbnails as needed -->
+                        <img onclick="document.getElementById('main-image3').src='images/schmup.gif';" src="images/schmup.gif" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image3').src='images/platformer.gif';" src="images/platformer.gif" alt="Thumbnail 2"/>
+                        <img onclick="document.getElementById('main-image3').src='images/pile.gif';" src="images/pile.gif" alt="Thumbnail 3"/>
+                        <img onclick="document.getElementById('main-image3').src='images/raycast.gif';" src="images/raycast.gif" alt="Thumbnail 4"/>
                     </div>
                 </div>
                 <div class="portfolio-description">
                     <h2>Surreal Engine</h2>
-                    <p>Solo Programmer, Start Date - End Date</p>
-                    <h3>Contributions:</h3>
-                    <P>
-                        List Contributions here.
-                    </P>
+                    <p>Solo Programmer, January 2024 - Present</p>
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>A Unity-inspired game engine that enables creation of advanced mechanics and visuals</li>
+                        <li>Lua scripting support via LuaBridge</li>
+                        <li>Scene management system where users can construct scenes composed of actors</li>
+                        <li>Component system for actors with lifecycle and physics callbacks</li>
+                        <li>Integrated Box2D physics engine, providing users with a robust physics API</li>
+                        <li>Intuitive input API that supports keyboard, mouse, and gamepads</li>
+                        <li>Multiple audio channels with support for precise audio playback</li>
+                    </ul>
                     <div class="tech-used">
                         <div class="tech-tags">
                             <span>C++</span>
@@ -364,7 +420,7 @@
                         </div>
                     </div>
                     <div class="portfolio-links">
-                        <a class="button" href="link-to-project" target="_blank">Download Binary</a>
+                        <a class="button" href="link-to-project" target="_blank">Download Binary with Example Game</a>
                         <a class="button" href="https://eecs498-game-engine.github.io/" target="_blank">Documentation</a>
                     </div>
                 </div>
@@ -375,7 +431,8 @@
         <section class="section contact" id="contact">
             <h2>Contact</h2>
             <p>
-                Let's get in touch! Email me at...
+                Email: nickolasdcerrone@gmail.com <br>
+                Linkdin: <a href="www.linkedin.com/in/nickolas-cerrone">Nickolas Cerrone</a>
             </p>
         </section>
     </main>
