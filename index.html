@@ -244,8 +244,8 @@
         <nav>
             <ul>
                 <li><a href="#about-me">About Me</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#other-projects">Other Projects</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#jams">Game Jam Games</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -255,11 +255,6 @@
             <h1>Hello 👋 I'm Nickolas Cerrone</h1>
             <img src="headshot.png" alt="Nickolas Cerrone's Headshot" class="profile-pic"/>
             <p>
-                <!-- I am currently pursuing a degree in <b>Computer Science</b> at the University of Michigan.
-                My passion is <b>game development</b> so I'm always trying to be active in the space, whether that be developing my own <b>C++ game engine</b>, participating in game jams, or working on my own games.
-                I am an active volunteer at <a href="https://www.wolverinesoft.org/">WolverineSoft</a>, a game development studio at the university, where I am a <b>Unity programmer</b> on <a href="#CEO">Corrupt Eldritch Order</a>.
-                My other hobbies include staying active through running (planning on a marathon this summer 🏃) and playing board games! -->
-
                 I am a <b>Computer Science</b> major from the University of Michigan with a passion for <b>game development</b>.
                 Currently, I serve as a <b>Unity programmer</b> for <a href="https://www.wolverinesoft.org/">WolverineSoft</a>, a student and alumni-led game development studio.
                 I've also immersed myself in the field through numerous personal projects, collaborative game jams, and even the development of my own <b>C++ game engine</b>.
@@ -270,8 +265,8 @@
             </div>
         </section>
 
-        <section class="section" id="games">
-            <h1><u>Games</u></h1>
+        <section class="section" id="projects">
+            <h1><u>Featured Projects</u></h1>
 
             <section id="CEO" class="portfolio-piece">
                 <div class="carousel-container">
@@ -286,12 +281,13 @@
                 <div class="portfolio-description">
                     <h2>Corrupt Eldritch Order</h2>
                     <p>Programmer and Quality Assurance, January 2024 - April 2024</p>
+                    <p>Corrupt Eldritch Order is an action rogue-like where you must defeat stages of enemies to escape the abyssal depths.</p>
                     <h3>Contributions:</h3>
                     <P>
                         <ul>
-                            <li>Created various menus, notifications, and HUD as part of the UI team</li>
+                            <li>Created various menus, notifications, and HUD elements</li>
                             <li>Implemented currency drops with Unity's particle system</li>
-                            <li>Gathered bug reports, requested features, and polish concerns during periodic playtests</li>
+                            <li>Gathered bug reports, feature requests, and polish concerns</li>
                             <li>Added a robust sytem for permanent unlockables</li>
                             <li>Integrated art into various parts of the game</li>
                             <li>Effectively communicated with teammates to enable clear flow of ideas</li>
@@ -312,37 +308,43 @@
                 </div>
             </section>
 
-            <section id="Doge" class="portfolio-piece">
+            <section class="portfolio-piece">
                 <div class="carousel-container">
-                    <img id="main-image4" src="images/doge.gif" alt="Main Image" />
+                    <img id="main-image3" src="images/schmup.gif" alt="Main Image" />
                     <div class="thumbnail-container">
-                        <img onclick="document.getElementById('main-image4').src='images/doge.gif';" src="images/doge.gif" alt="Thumbnail 1" />
-                        <img onclick="document.getElementById('main-image4').src='images/doge1.png';" src="images/doge1.png" alt="Thumbnail 2" />
-                        <img onclick="document.getElementById('main-image4').src='images/doge2.png';" src="images/doge2.png" alt="Thumbnail 3" />
+                        <img onclick="document.getElementById('main-image3').src='images/schmup.gif';" src="images/schmup.gif" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image3').src='images/platformer.gif';" src="images/platformer.gif" alt="Thumbnail 2"/>
+                        <img onclick="document.getElementById('main-image3').src='images/pile.gif';" src="images/pile.gif" alt="Thumbnail 3"/>
+                        <img onclick="document.getElementById('main-image3').src='images/raycast.gif';" src="images/raycast.gif" alt="Thumbnail 4"/>
                     </div>
                 </div>
                 <div class="portfolio-description">
-                    <h2>Doge</h2>
-                    <p>Programmer, January 2024 (Global Game Jam 2024) </p>
-                    <h3>Contributions:</h3>
-                    <P>
-                        <ul>
-                            <li>Acted as lead developer where I was responsible for programming or supervising all code-related tasks</li>
-                            <li>Imported and implemented art and audio assets created by teammates</li>
-                            <li>Managed restricted time and resources apporpriately to allow for an on-time release</li>
-                            <li>Prioritized features and tasks to achieve best player experience on release</li>
-                            <li>Guided a beginner unity programmer to the point of independence with minimal need for intervention</li>
-                        </ul>
-                    </P>
+                    <h2>Surreal Engine</h2>
+                    <p>Solo Programmer, January 2024 - Present</p>
+                    <p>A Unity-inspired game engine that enables creation of advanced mechanics and visuals.</p>
+                    <h3>Features:</h3>
+                    <ul>
+                        <li>Lua scripting support via LuaBridge</li>
+                        <li>Scene management system where users can construct scenes composed of actors</li>
+                        <li>Component system for actors with lifecycle and physics callbacks</li>
+                        <li>Integrated Box2D physics engine, providing users with a robust physics API</li>
+                        <li>Intuitive input API that supports keyboard, mouse, and gamepads</li>
+                        <li>Create an EventBus API that allows for elegant decoupling of components</li>
+                        <li>Multiple audio channels with support for precise audio playback</li>
+                    </ul>
                     <div class="tech-used">
                         <div class="tech-tags">
-                            <span>Unity</span>
-                            <span>C#</span>
+                            <span>C++</span>
+                            <span>Lua</span>
+                            <span>SDL2</span>
+                            <span>GLM</span>
+                            <span>Box2D</span>
                             <span>Git</span>
                         </div>
                     </div>
                     <div class="portfolio-links">
-                        <a class="button" href="https://angelpuffy.itch.io/doge" target="_blank">Itch.io</a>
+                        <a class="button" href="link-to-project" target="_blank">Download Binary with Example Game</a>
+                        <a class="button" href="https://eecs498-game-engine.github.io/" target="_blank">Documentation</a>
                     </div>
                 </div>
             </section>
@@ -361,6 +363,7 @@
                 <div class="portfolio-description">
                     <h2>Drawn Together</h2>
                     <p>Programmer, October 2023 - December 2023</p>
+                    <p>Drawn Together is a 3D puzzle-platformer where you must work together to collect Skrib and Sketch's missing pages.</p>
                     <h3>Contributions:</h3>
                     <P>
                         <ul>
@@ -387,39 +390,38 @@
                     </div>
                 </div>
             </section>
-            
 
-            <section id="mickey-q" class="portfolio-piece">
+            <section id="one-man-band" class="portfolio-piece">
                 <div class="carousel-container">
-                    <img id="main-image8" src="images/mq3.gif" alt="Main Image" />
+                    <img id="main-image9" src="images/omb2.gif" alt="Main Image"/>
                     <div class="thumbnail-container">
-                        <img onclick="document.getElementById('main-image8').src='images/mq0.png';" src="images/mq0.png" alt="Thumbnail 1" />
-                        <img onclick="document.getElementById('main-image8').src='images/mq3.gif';" src="images/mq3.gif" alt="Thumbnail 1" />
-                        <img onclick="document.getElementById('main-image8').src='images/mq1.png';" src="images/mq1.png" alt="Thumbnail 3" />
-                        <img onclick="document.getElementById('main-image8').src='images/mq4.png';" src="images/mq4.png" alt="Thumbnail 2" />
+                        <img onclick="document.getElementById('main-image9').src='images/omb1.gif';" src="images/omb1.gif" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image9').src='images/omb2.gif';" src="images/omb2.gif" alt="Thumbnail 2" />
+                        <img onclick="document.getElementById('main-image9').src='images/omb3.gif';" src="images/omb3.gif" alt="Thumbnail 3" />
                     </div>
                 </div>
                 <div class="portfolio-description">
-                    <h2>Mickey-Q's Toxic Yaoi</h2>
-                    <p>Programmer, March 2024 (WolverineSoft Shammy Jam 2024)</p>
+                    <h2>One Man Band</h2>
+                    <p>Programmer, April 2024</p>
+                    <p>One Man Band is a rhythm game where your survival against endless hordes depends on your ability to move to the music, turning your collection of instruments into a symphony of destruction.</p>
                     <h3>Contributions:</h3>
                     <P>
                         <ul>
-                            <li>Integrated <a href="https://www.yarnspinner.dev/">YarnSpinner</a>, a popular third party dialogue tool, into Unity project</li>
-                            <li>Developed character state system to allow for differnt emotions and sounds to be displayed at certain times</li>
-                            <li>Worked effectively with narrative and programming teams to efficiently import large amounts of dialogue in a short time span</li>
+                            <li>Designed and implemented all game mechanics and features in my own Surreal game engine</li>
+                            <li>Created art and music</li>
+                            <li>Used game development process to add and improve features to my engine</li>
                         </ul>
                     </P>
                     <div class="tech-used">
                         <div class="tech-tags">
-                            <span>Unity</span>
-                            <span>C#</span>
+                            <span>Lua</span>
+                            <span>Aseprite</span>
+                            <span>Bosca Ceoil</span>
                             <span>Git</span>
-                            <span>YarnSpinner</span>
                         </div>
                     </div>
                     <div class="portfolio-links">
-                        <a class="button" href="https://nottinanguyen.itch.io/mickey-q-toxic-yaoi" target="_blank">Itch.io</a>
+                        <a class="button" href="https://www.youtube.com/watch?v=MwVvAL77yjc" target="_blank">Watch the Dev Log</a>
                     </div>
                 </div>
             </section>
@@ -431,6 +433,7 @@
                 <div class="portfolio-description">
                     <h2>Yahtzee Android App</h2>
                     <p>Programmer, December 2020</p>
+                    <p>A mobile app implementation for the claassic game Yahtzee.</p>
                     <h3>Contributions:</h3>
                     <P>
                         <ul>
@@ -450,52 +453,7 @@
                     </div>
                 </div>
             </section>
-
-        </section>
-        
-        <section class="section" id="other-projects">
-            <h1><u>Other Projects</u></h1>
-
-            <section class="portfolio-piece">
-                <div class="carousel-container">
-                    <img id="main-image3" src="images/schmup.gif" alt="Main Image" />
-                    <div class="thumbnail-container">
-                        <img onclick="document.getElementById('main-image3').src='images/schmup.gif';" src="images/schmup.gif" alt="Thumbnail 1" />
-                        <img onclick="document.getElementById('main-image3').src='images/platformer.gif';" src="images/platformer.gif" alt="Thumbnail 2"/>
-                        <img onclick="document.getElementById('main-image3').src='images/pile.gif';" src="images/pile.gif" alt="Thumbnail 3"/>
-                        <img onclick="document.getElementById('main-image3').src='images/raycast.gif';" src="images/raycast.gif" alt="Thumbnail 4"/>
-                    </div>
-                </div>
-                <div class="portfolio-description">
-                    <h2>Surreal Engine</h2>
-                    <p>Solo Programmer, January 2024 - Present</p>
-                    <h3>Features:</h3>
-                    <ul>
-                        <li>A Unity-inspired game engine that enables creation of advanced mechanics and visuals</li>
-                        <li>Lua scripting support via LuaBridge</li>
-                        <li>Scene management system where users can construct scenes composed of actors</li>
-                        <li>Component system for actors with lifecycle and physics callbacks</li>
-                        <li>Integrated Box2D physics engine, providing users with a robust physics API</li>
-                        <li>Intuitive input API that supports keyboard, mouse, and gamepads</li>
-                        <li>Create an EventBus API that allows for elegant decoupling of components</li>
-                        <li>Multiple audio channels with support for precise audio playback</li>
-                    </ul>
-                    <div class="tech-used">
-                        <div class="tech-tags">
-                            <span>C++</span>
-                            <span>Lua</span>
-                            <span>SDL2</span>
-                            <span>Box2D</span>
-                            <span>Git</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-links">
-                        <a class="button" href="link-to-project" target="_blank">Download Binary with Example Game</a>
-                        <a class="button" href="https://eecs498-game-engine.github.io/" target="_blank">Documentation</a>
-                    </div>
-                </div>
-            </section>
-
+            
             <section class="portfolio-piece">
                 <div class="carousel-container">
                     <img id="main-image7" src="images/open-sheet.png" alt="Main Image" />
@@ -506,6 +464,7 @@
                 <div class="portfolio-description">
                     <h2>Open Sheet</h2>
                     <p>Solo Programmer, May 2023 - August 2023</p>
+                    <p>A tabletop RPG character sheet focused on user customization.</p>
                     <h3>Features:</h3>
                     <ul>
                         <li>Designed project structure from the ground up using Electron and React to create a modern desktop application while leveraging web technologies</li>
@@ -528,6 +487,80 @@
                 </div>
             </section>
 
+        </section>
+        
+        <section class="section" id="jams">
+            <h1><u>Game Jam Games</u></h1>
+            <section id="Doge" class="portfolio-piece">
+                <div class="carousel-container">
+                    <img id="main-image4" src="images/doge.gif" alt="Main Image" />
+                    <div class="thumbnail-container">
+                        <img onclick="document.getElementById('main-image4').src='images/doge.gif';" src="images/doge.gif" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image4').src='images/doge1.png';" src="images/doge1.png" alt="Thumbnail 2" />
+                        <img onclick="document.getElementById('main-image4').src='images/doge2.png';" src="images/doge2.png" alt="Thumbnail 3" />
+                    </div>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Doge</h2>
+                    <p>Programmer, January 2024 (Global Game Jam 2024) </p>
+                    <p>Doge is an infinite sidescroller where you must prolong your walk to eat as much as possible.</p>
+                    <h3>Contributions:</h3>
+                    <P>
+                        <ul>
+                            <li>Acted as lead developer where I was responsible for programming or supervising all code-related tasks</li>
+                            <li>Imported and implemented art and audio assets created by teammates</li>
+                            <li>Managed restricted time and resources apporpriately to allow for an on-time release</li>
+                            <li>Guided a beginner unity programmer to the point of independence with minimal need for intervention</li>
+                        </ul>
+                    </P>
+                    <div class="tech-used">
+                        <div class="tech-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Git</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-links">
+                        <a class="button" href="https://angelpuffy.itch.io/doge" target="_blank">Itch.io</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mickey-q" class="portfolio-piece">
+                <div class="carousel-container">
+                    <img id="main-image8" src="images/mq3.gif" alt="Main Image" />
+                    <div class="thumbnail-container">
+                        <img onclick="document.getElementById('main-image8').src='images/mq0.png';" src="images/mq0.png" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image8').src='images/mq3.gif';" src="images/mq3.gif" alt="Thumbnail 1" />
+                        <img onclick="document.getElementById('main-image8').src='images/mq1.png';" src="images/mq1.png" alt="Thumbnail 3" />
+                        <img onclick="document.getElementById('main-image8').src='images/mq4.png';" src="images/mq4.png" alt="Thumbnail 2" />
+                    </div>
+                </div>
+                <div class="portfolio-description">
+                    <h2>Mickey-Q's Toxic Yaoi</h2>
+                    <p>Programmer, March 2024 (WolverineSoft Shammy Jam 2024)</p>
+                    <p>Mickey-Q's Toxic Yaoi is a dating simulator where you can romance various popular video game characters.</p>
+                    <h3>Contributions:</h3>
+                    <P>
+                        <ul>
+                            <li>Integrated <a href="https://www.yarnspinner.dev/">YarnSpinner</a>, a popular third party dialogue tool, into Unity project</li>
+                            <li>Developed character state system to allow for differnt emotions and sounds to be displayed at certain times</li>
+                            <li>Worked effectively with narrative and programming teams to efficiently import large amounts of dialogue in a short time span</li>
+                        </ul>
+                    </P>
+                    <div class="tech-used">
+                        <div class="tech-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Git</span>
+                            <span>YarnSpinner</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-links">
+                        <a class="button" href="https://nottinanguyen.itch.io/mickey-q-toxic-yaoi" target="_blank">Itch.io</a>
+                    </div>
+                </div>
+            </section>
         </section>
         
         <section class="section contact" id="contact">
