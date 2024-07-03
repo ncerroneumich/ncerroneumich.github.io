@@ -135,7 +135,7 @@ header nav ul li a.active {
     text-align: center;
 }
 
-.carousel-container img {
+.carousel-container img, video {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -147,7 +147,7 @@ header nav ul li a.active {
     gap: 10px; /* Adjust the space between thumbnails */
 }
 
-.thumbnail-container img {
+.thumbnail-container img, video {
     width: 60px;
     height: 60px;
     object-fit: cover;
@@ -157,7 +157,7 @@ header nav ul li a.active {
     transition: opacity 0.3s;
 }
 
-.thumbnail-container img:hover {
+.thumbnail-container img:hover, video {
     opacity: 1;
 }
 
